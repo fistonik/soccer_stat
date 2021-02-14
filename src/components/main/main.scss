@@ -1,0 +1,14 @@
+.container {
+  width: 1200px;
+  height: 600px;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0px 5px 16px 0px #80eaa885;
+}
+
+.main {
+  &__img {
+    width: 50%;
+  }
+}

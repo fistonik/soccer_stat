@@ -25,6 +25,7 @@ if (!devMode) {
 }
 
 module.exports = {
+  mode: 'development',
   entry: SRC + 'index.js',
   output: {
     filename: 'bundle.js',
@@ -32,7 +33,8 @@ module.exports = {
   },
   devServer: {
     contentBase: PUB,
-    historyApiFallback: true
+    historyApiFallback: true,
+    // host: '192.168.31.8'
   },
   devtool: 'source-map',
   resolve: {
@@ -66,7 +68,11 @@ module.exports = {
           },
           'sass-loader'
         ]
-      }
+      },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/,
+        type: 'asset/inline',
+      },
     ]
   },
   plugins
